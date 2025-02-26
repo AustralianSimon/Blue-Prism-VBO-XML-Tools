@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bpr:release xmlns:bpr="http://www.blueprism.co.uk/product/release">
+    <bpr:name>Utility_XML_Tools_C_V1_Feb2025</bpr:name>
+    <bpr:release-notes />
+    <bpr:created>2025-02-26 00:14:06Z</bpr:created>
+    <bpr:package-id>12</bpr:package-id>
+    <bpr:package-name>Utility - XML Tools - C</bpr:package-name>
+    <bpr:user-created-by>admin</bpr:user-created-by>
+    <bpr:contents count="2">
+        <object id="cb6670cc-eec0-46cc-9ed1-bc6d42d345a2" name="Utility - XML Tools - C" xmlns="http://www.blueprism.co.uk/product/process"><process name="Utility - XML Tools - C" version="1.0" bpversion="7.0.0.40580" narrative="Set of open source XML tools I have written for private use. Feel free to use at your company." byrefcollection="true" type="object" runmode="Background"><appdef><element name="Application Root"><id>33f89b45-b01f-40d2-8e90-b7b08ab64afb</id><type>Application</type><basetype>Application</basetype><datatype>unknown</datatype><diagnose>False</diagnose></element></appdef><view><camerax>0</camerax><cameray>0</cameray><zoom version="2">1.25</zoom></view><preconditions /><endpoint narrative="" /><subsheet subsheetid="81756a93-7acf-4e1e-bf82-a738608e29be" type="CleanUp" published="True"><name>Clean Up</name><view><camerax>0</camerax><cameray>0</cameray><zoom version="2">1.25</zoom></view></subsheet><subsheet subsheetid="f8447336-dac1-4a75-aacf-b7b2cab7c35c" type="Normal" published="False"><name>WIP XML to Collection</name><view><camerax>0</camerax><cameray>0</cameray><zoom version="2">1.25</zoom></view></subsheet><subsheet subsheetid="67c69dc0-ff66-4cac-9a38-62ca0b96a51e" type="Normal" published="True"><name>Validate XML with XSD Schema</name><view><camerax>0</camerax><cameray>0</cameray><zoom version="2">1.25</zoom></view></subsheet><stage stageid="f694170d-d35c-4aa8-a432-3557f2b99640" name="Start" type="Start"><loginhibit /><display x="15" y="-105" /><onsuccess>4a7a26c1-36f9-41d8-8f29-6660cea66355</onsuccess></stage><stage stageid="4a7a26c1-36f9-41d8-8f29-6660cea66355" name="End" type="End"><loginhibit /><display x="15" y="90" /></stage><stage stageid="2c3f2409-551a-4ddd-8f96-efa76a6208db" name="Stage1" type="ProcessInfo"><display x="-195" y="-105" w="150" h="90" /><references><reference>System.dll</reference><reference>System.Data.dll</reference><reference>System.Xml.dll</reference><reference>System.Drawing.dll</reference></references><imports><import>System</import><import>System.Drawing</import><import>System.Data</import><import>System.IO</import><import>System.Xml.Schema</import><import>System.Xml</import><import>System.Collections.Generic</import><import>System.Text</import></imports><language>csharp</language><globalcode><![CDATA[]]></globalcode><code><![CDATA[]]></code></stage><stage stageid="9d708624-5552-40c7-85fa-4f0c32b4ab84" name="Clean Up" type="SubSheetInfo"><subsheetid>81756a93-7acf-4e1e-bf82-a738608e29be</subsheetid><display x="-195" y="-105" w="150" h="90" /></stage><stage stageid="742fd3b4-8ff9-47dc-97e4-9b9caffcb00d" name="Start" type="Start"><subsheetid>81756a93-7acf-4e1e-bf82-a738608e29be</subsheetid><loginhibit /><display x="15" y="-105" /><onsuccess>e5c87a1e-d76b-4229-9f6d-af563c7d152e</onsuccess></stage><stage stageid="e5c87a1e-d76b-4229-9f6d-af563c7d152e" name="End" type="End"><subsheetid>81756a93-7acf-4e1e-bf82-a738608e29be</subsheetid><loginhibit /><display x="15" y="90" /></stage><stage stageid="221e220f-ce95-4ff4-aa5e-7c3a62aa9c17" name="WIP XML to Collection" type="SubSheetInfo"><subsheetid>f8447336-dac1-4a75-aacf-b7b2cab7c35c</subsheetid><display x="-195" y="-105" w="150" h="90" /></stage><stage stageid="e8fd5041-e12f-4945-8916-6a02f4b8e864" name="Start" type="Start"><subsheetid>f8447336-dac1-4a75-aacf-b7b2cab7c35c</subsheetid><loginhibit /><display x="15" y="-105" /><onsuccess>80bbdef6-d5ac-4987-accc-675f3ca61c35</onsuccess></stage><stage stageid="32bc8a93-55d5-4625-b5b3-442f2be4bef9" name="End" type="End"><subsheetid>f8447336-dac1-4a75-aacf-b7b2cab7c35c</subsheetid><loginhibit /><display x="15" y="90" /></stage><stage stageid="52e4ec95-a50f-4361-8b97-c05a79f52ae7" name="Note1" type="Note"><subsheetid>81756a93-7acf-4e1e-bf82-a738608e29be</subsheetid><narrative>Clean Up Page
+
+This is an optional page where you might choose to perform some finalisation (or "cleanup") tasks as your business object is closed down.
+
+The cleanup action will be called automatically immediately after closing your business object at the end of a business process.
+
+You will not be able to call this action from a business process, nor will it be called at any other time than before the disposal of the business object.</narrative><display x="-180" y="60" w="180" h="230" /></stage><stage stageid="0b63179c-420d-4da1-b0c4-f3e52e410aa1" name="Note2" type="Note"><narrative>V1.0
+
+Initial page is the XSD Schema Validation function.
+
+Beginning working on XML to Collection.</narrative><display x="-180" y="60" w="180" h="230" /></stage><stage stageid="80bbdef6-d5ac-4987-accc-675f3ca61c35" name="Code1" type="Code"><subsheetid>f8447336-dac1-4a75-aacf-b7b2cab7c35c</subsheetid><loginhibit /><display x="15" y="-60" /><inputs><input type="text" name="xmlString" expr="[txt_xml]" /></inputs><outputs><output type="collection" name="outputCollection" stage="col_xml" /></outputs><onsuccess>32bc8a93-55d5-4625-b5b3-442f2be4bef9</onsuccess><code><![CDATA[
+
+
+
+DataSet dataSet = new DataSet();
+StringReader stringReader = new StringReader(xmlString);
+dataSet.ReadXml(stringReader);
+
+// Check if we have at least one table
+if (dataSet.Tables.Count > 0)
+{
+    outputCollection = dataSet.Tables[0]; // Assign the first table to the output collection
+}
+else
+{
+    throw new Exception("No tables found in XML");
+}]]></code></stage><stage stageid="58e90a54-acc0-4721-bad8-3fabbcce26b7" name="txt_xml" type="Data"><subsheetid>f8447336-dac1-4a75-aacf-b7b2cab7c35c</subsheetid><loginhibit /><display x="-135" y="-15" /><datatype>text</datatype><initialvalue xml:space="preserve">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;Message version="1.0.0"&gt;
+  &lt;Metadata&gt;
+    &lt;SenderEmail&gt;john.doe@example.com&lt;/SenderEmail&gt;
+    &lt;Priority&gt;High&lt;/Priority&gt;
+  &lt;/Metadata&gt;
+  &lt;Payload&gt;
+    &lt;Content&gt;This is an example message content.&lt;/Content&gt;
+    &lt;Attachment&gt;
+      &lt;FileName&gt;document.pdf&lt;/FileName&gt;
+      &lt;ContentType&gt;application/pdf&lt;/ContentType&gt;
+      &lt;Data&gt;SGVsbG8gV29ybGQh&lt;/Data&gt;
+    &lt;/Attachment&gt;
+  &lt;/Payload&gt;
+&lt;/Message&gt;</initialvalue><private /><alwaysinit /></stage><stage stageid="fd251b19-11b2-4820-a303-e07e3f801922" name="col_xml" type="Collection"><subsheetid>f8447336-dac1-4a75-aacf-b7b2cab7c35c</subsheetid><loginhibit /><display x="-135" y="30" /><datatype>collection</datatype><private /><alwaysinit /></stage><stage stageid="f0ddf76f-70bd-4f31-ac49-8437b8596727" name="Validate XML with XSD Schema" type="SubSheetInfo"><subsheetid>67c69dc0-ff66-4cac-9a38-62ca0b96a51e</subsheetid><narrative>Takes input filepath for XML and input filepath for XSD schema and runs validation on XML to return result and errors if there were any.</narrative><display x="-195" y="-105" w="150" h="90" /></stage><stage stageid="38470211-7d87-454f-9ad6-67176393920a" name="Start" type="Start"><subsheetid>67c69dc0-ff66-4cac-9a38-62ca0b96a51e</subsheetid><loginhibit /><display x="-45" y="-120" /><inputs><input type="text" name="in_xml" narrative="Input XML filepath for validation." stage="txt_xml" /><input type="text" name="in_xsd" narrative="Input XSD filepath for validating input XML." stage="txt_xsd" /></inputs><onsuccess>9f3811b7-ca0a-4e96-92bf-1dd760882a72</onsuccess></stage><stage stageid="fcbb517c-c0f5-4cc4-b54f-89b977688be8" name="End" type="End"><subsheetid>67c69dc0-ff66-4cac-9a38-62ca0b96a51e</subsheetid><loginhibit /><display x="-45" y="0" /><outputs><output type="flag" name="out_result" narrative="Result of validation. False indicates failure." stage="flg_result" /><output type="collection" name="out_errors" narrative="Errors identified during validation. Blank if there are none." stage="col_errors" /></outputs></stage><stage stageid="9f3811b7-ca0a-4e96-92bf-1dd760882a72" name="validateXmlWithXsdSchema" type="Code"><subsheetid>67c69dc0-ff66-4cac-9a38-62ca0b96a51e</subsheetid><loginhibit /><display x="-45" y="-60" /><inputs><input type="text" name="xmlFilePath" expr="[txt_xml]" /><input type="text" name="xsdFilePath" expr="[txt_xsd]" /></inputs><outputs><output type="flag" name="out_IsValid" stage="flg_result" /><output type="collection" name="out_Errors" stage="col_errors" /></outputs><onsuccess>fcbb517c-c0f5-4cc4-b54f-89b977688be8</onsuccess><code><![CDATA[// Create our validation result data table
+System.Data.DataTable errorTable = new System.Data.DataTable();
+errorTable.Columns.Add("Error", typeof(string));
+
+bool isValid = true;
+
+try
+{
+    // Create reader settings
+    System.Xml.XmlReaderSettings settings = new System.Xml.XmlReaderSettings();
+    settings.ValidationType = System.Xml.ValidationType.Schema;
+    settings.ValidationFlags |= System.Xml.Schema.XmlSchemaValidationFlags.ReportValidationWarnings;
+    
+    // Create and load schema set
+    System.Xml.Schema.XmlSchemaSet schemas = new System.Xml.Schema.XmlSchemaSet();
+    schemas.Add("", xsdFilePath);
+    settings.Schemas = schemas;
+    
+    // Set validation event handler
+    settings.ValidationEventHandler += (sender, e) => 
+    {
+        isValid = false;
+        System.Data.DataRow row = errorTable.NewRow();
+        row["Error"] = e.Severity.ToString() + ": " + e.Message;
+        errorTable.Rows.Add(row);
+    };
+    
+    // Perform the validation
+    using (System.Xml.XmlReader reader = System.Xml.XmlReader.Create(xmlFilePath, settings))
+    {
+        while (reader.Read()) { }
+    }
+}
+catch (System.Exception ex)
+{
+    isValid = false;
+    System.Data.DataRow row = errorTable.NewRow();
+    row["Error"] = "Exception: " + ex.Message;
+    errorTable.Rows.Add(row);
+}
+
+// Set the output parameters
+// Assuming your outputs are named out_IsValid and out_Errors
+out_IsValid = isValid;
+out_Errors = errorTable;]]></code></stage><stage stageid="9d04a389-db31-4428-aa72-0fcb24f31b31" name="txt_xml" type="Data"><subsheetid>67c69dc0-ff66-4cac-9a38-62ca0b96a51e</subsheetid><loginhibit /><display x="-225" y="-15" /><datatype>text</datatype><initialvalue /><private /><alwaysinit /></stage><stage stageid="0277a2fe-d0ef-49f6-88e9-ebec35747451" name="txt_xsd" type="Data"><subsheetid>67c69dc0-ff66-4cac-9a38-62ca0b96a51e</subsheetid><loginhibit /><display x="-165" y="-15" /><datatype>text</datatype><initialvalue /><private /><alwaysinit /></stage><stage stageid="c1665ebe-0c0a-40ad-ac6d-87f3008c9b72" name="flg_result" type="Data"><subsheetid>67c69dc0-ff66-4cac-9a38-62ca0b96a51e</subsheetid><display x="-225" y="60" /><datatype>flag</datatype><initialvalue /><private /><alwaysinit /></stage><stage stageid="b23552b2-1628-41c0-8e62-9d0cafbe36d1" name="col_errors" type="Collection"><subsheetid>67c69dc0-ff66-4cac-9a38-62ca0b96a51e</subsheetid><display x="-165" y="60" /><datatype>collection</datatype><private /><alwaysinit /></stage><stage stageid="7799cfeb-cb19-446b-980c-95b2621955d2" name="Input Variables" type="Block"><subsheetid>67c69dc0-ff66-4cac-9a38-62ca0b96a51e</subsheetid><loginhibit /><display x="-270" y="-45" w="150" h="60" /><font family="Segoe UI" size="10" style="Regular" color="FF9900" /></stage><stage stageid="f71b544a-5a0f-479b-a6e8-a235eb85bf87" name="Output Variables" type="Block"><subsheetid>67c69dc0-ff66-4cac-9a38-62ca0b96a51e</subsheetid><loginhibit /><display x="-270" y="30" w="150" h="60" /><font family="Segoe UI" size="10" style="Regular" color="99CC00" /></stage></process></object>
+        <object-group id="84973cbd-6ed9-4d30-9008-517a6a31052d" name="Default" isDefaultGroup="True" xmlns="http://www.blueprism.co.uk/product/object-group">
+            <members>
+                <object id="cb6670cc-eec0-46cc-9ed1-bc6d42d345a2" />
+            </members>
+        </object-group>
+    </bpr:contents>
+</bpr:release>
